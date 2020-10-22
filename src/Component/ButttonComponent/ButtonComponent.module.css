@@ -1,0 +1,20 @@
+.button_style {
+    border: solid 2px aqua;
+    border-radius: 5px;
+    margin: 20px 0px 0px 0px;
+    width: 494px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.button_style_size {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: aqua;
+    border-color: aqua;
+    font-size: 213%;
+    font-family: fantasy;
+}

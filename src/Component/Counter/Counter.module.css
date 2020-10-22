@@ -1,0 +1,16 @@
+.stop {
+    color: red;
+}
+
+.display_style {
+    background-color: aqua;
+    text-align: center;
+     height: 200px;
+      font-size: 500%;
+    font-family: fantasy;
+    border-radius: 10px;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

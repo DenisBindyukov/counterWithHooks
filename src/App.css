@@ -1,0 +1,12 @@
+.App{
+    position: absolute;
+    top: 320px;
+    left: 646px;
+    border: solid 3px aqua;
+    padding: 20px;
+    background-color: #141313;
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+}
+
