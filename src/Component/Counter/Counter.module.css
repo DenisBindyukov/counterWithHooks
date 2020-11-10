@@ -1,15 +1,18 @@
-.stop {
-    color: red;
-}
-
 .display_style {
-    background-color: aqua;
+    font-size: xx-large;
+    font-family: fantasy;
+    border: 2px solid aqua;
+    background-color: #141313;
+    color: aqua;
     text-align: center;
-     height: 200px;
-      font-size: 500%;
+    height: 200px;
     border-radius: 10px;
-     display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 
+}
+
+.error_stop {
+    color: red;
 }

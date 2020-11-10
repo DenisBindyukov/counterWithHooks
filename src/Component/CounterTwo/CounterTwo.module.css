@@ -1,0 +1,42 @@
+.display_style {
+    border: 2px solid aqua;
+    background-color: #141313;
+    text-align: center;
+    height: 200px;
+    font-size: 500%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+span {
+    color: aqua;
+    font-family: fantasy;
+    font-size: xx-large;
+    margin-right: 111px;
+    display: inline-block;
+}
+input {
+    font-family: fantasy;
+    font-size: medium;
+    text-align: center;
+    border: solid 3px aqua;
+    border-radius: 3px;
+    height: 30px;
+    padding-left: 20px;
+}
+
+.max_value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 73px;
+    padding-top: 49px;
+
+}
+
+.error {
+    border: red solid 3px;
+    background-color: #FC8585;
+}
