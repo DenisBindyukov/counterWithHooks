@@ -1,6 +1,6 @@
-import React, {ChangeEvent, useState} from 'react';
-import style from './CounterTwo.module.css'
-import ButtonSetting from "./ButtonTwo/ButtonTwo";
+import React, {ChangeEvent} from 'react';
+import style from './SettingCounter.module.css'
+import ButtonSetting from "./ButtonForSetting/ButtonForSetting";
 
 type CounterType = {
     startValue: number
@@ -12,7 +12,7 @@ type CounterType = {
     onClickResetValueForCounterHandler: () => void
 }
 
-const CounterTwo: React.FC<CounterType> = (props) => {
+const SettingCounter: React.FC<CounterType> = (props) => {
 
 
     let onChangeForMaxValueHandler = (e: ChangeEvent<HTMLInputElement>) => {
@@ -47,4 +47,4 @@ const CounterTwo: React.FC<CounterType> = (props) => {
     );
 }
 
-export default CounterTwo;
+export default SettingCounter;

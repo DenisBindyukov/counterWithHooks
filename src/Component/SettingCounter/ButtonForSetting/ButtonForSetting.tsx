@@ -1,12 +1,12 @@
 import React from 'react';
-import style from './ButtonTwo.module.css';
+import style from './ButtonForSetting.module.css';
 
 type ButtonType = {
     onClickResetValueForCounterHandler: () => void
     valueDisableButton: boolean
 }
 
-const ButtonTwo: React.FC<ButtonType> = (props) => {
+const ButtonForSetting: React.FC<ButtonType> = (props) => {
     return (
         <div className={style.button_style}>
             <button onClick={props.onClickResetValueForCounterHandler}
@@ -19,4 +19,4 @@ const ButtonTwo: React.FC<ButtonType> = (props) => {
     );
 }
 
-export default ButtonTwo;
+export default ButtonForSetting;

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import Counter from "./Component/Counter/Counter";
-import SettingCounter from "./Component/CounterTwo/CounterTwo";
+import SettingCounter from "./Component/SettingCounter/SettingCounter";
 
 function App() {
     const textForCounter = `Enter value and press 'set'`;
