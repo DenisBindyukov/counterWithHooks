@@ -14,7 +14,6 @@ type CounterType = {
 
 const SettingCounter: React.FC<CounterType> = (props) => {
 
-
     let onChangeForMaxValueHandler = (e: ChangeEvent<HTMLInputElement>) => {
         props.maxValueHandler(Number(e.currentTarget.value));
     };

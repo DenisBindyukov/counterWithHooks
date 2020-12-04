@@ -16,7 +16,7 @@ const Button: React.FC<ButtonType> = (props) => {
         <div className={style.button_style}>
         <button onClick={ props.increaseStartValue } className={style.button_style_size}
                 disabled={ (typeof props.startValue == "string") ? true :
-                           (props.startValueForCounter === props.maxValue)? true : false}>inc</button>
+                          (props.startValueForCounter === props.maxValue)? true : false}>inc</button>
         <button onClick={props.resetStartValue}  className={style.button_style_size}
                 disabled={ props.startValue === props.startValueForCounter ? true : false}>reset</button>
 

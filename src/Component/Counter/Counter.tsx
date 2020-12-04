@@ -14,7 +14,8 @@ type CounterType = {
 const Counter: React.FC<CounterType> = (props) => {
     return (
         <div>
-            <div className={`${style.display_style} ${props.error || props.startValueForCounter === props.maxValue ? style.error_stop :''}`}>
+            <div className={`${style.display_style}
+             ${props.error || props.startValueForCounter === props.maxValue ? style.error_stop :''}`}>
                 {!props.error && props.startValueForCounter}
                 {props.error && props.error}
             </div>
