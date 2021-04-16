@@ -1,9 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import './App.css';
 import Counter from "./Component/Counter/Counter";
 import SettingCounter from "./Component/SettingCounter/SettingCounter";
 
 function App() {
+
+    console.log('Rendering')
 
     const textForCounter = `Enter value and press 'set'`;
     const [startValueForCounter, setStartValueForCounter] = useState<number | string>(textForCounter);
@@ -32,7 +34,7 @@ function App() {
         setStartValueForCounter(startValue);
         saveToStorage();
     }
-    const maxValueHandler = (maxNum: number) => {
+    const maxValueHandler = useCallback((maxNum: number) => {
         if (maxNum < 0 || maxNum < startValue || maxNum === startValue || startValue < 0) {
             setError('Incorrect value');
             setDisableSetting(true);
@@ -43,8 +45,8 @@ function App() {
             setMaxValue(maxNum);
             setStartValueForCounter(textForCounter);
         }
-    }
-    const startValueHandler = (startValue: number) => {
+    }, [])
+    const startValueHandler = useCallback((startValue: number) => {
         if (startValue < 0 || startValue > maxValue || startValue === maxValue) {
             setError('Incorrect value');
             setDisableSetting(true);
@@ -56,7 +58,7 @@ function App() {
             setStartValue(startValue);
             setStartValueForCounter(textForCounter);
         }
-    }
+    }, [])
     const onClickResetValueForCounterHandler = () => {
         setStartValueForCounter(startValue);
     }
@@ -66,6 +68,49 @@ function App() {
         localStorage.setItem('startValue', startValue.toString());
     }
 
+
+ //    class Animal  {
+ //        name: string
+ //
+ //        constructor(name = 'Animal') {
+ //            this.name = name;
+ //        }
+ //        walk() {
+ //              console.log(`${this.name} WOOF!`)
+ //        }
+ //        eat() {
+ //              console.log(`${this.name} EAT!`)
+ //        }
+ //        sleep() {
+ //              console.log(`${this.name} SLEEPING!`)
+ //        }
+ //    }
+ //
+ //    let dog = new Animal();
+ //
+ //    dog.eat();
+ //
+ //    class Monkey extends Animal {
+ //
+ //        constructor(name: string = 'Monkey') {
+ //            super(name);
+ //        }
+ //
+ //        roar() {
+ //            console.log(`${this.name} Roar`)
+ //        }
+ //
+ //        climb() {
+ //            console.log(`${this.name} climb`)
+ //        }
+ //    }
+ //
+ //  let monkey = new Monkey()
+ //
+ // monkey.climb()
+ //
+ //    console.log(monkey)
+ //    console.log(dog)
 
     return (
         <div>
@@ -92,5 +137,6 @@ function App() {
 
     );
 }
+
 
 export default App;

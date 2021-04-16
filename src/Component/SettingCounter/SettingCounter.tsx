@@ -12,7 +12,7 @@ type CounterType = {
     onClickResetValueForCounterHandler: () => void
 }
 
-const SettingCounter: React.FC<CounterType> = (props) => {
+const SettingCounter: React.FC<CounterType> = React.memo((props) => {
 
     let onChangeForMaxValueHandler = (e: ChangeEvent<HTMLInputElement>) => {
         props.maxValueHandler(Number(e.currentTarget.value));
@@ -44,6 +44,6 @@ const SettingCounter: React.FC<CounterType> = (props) => {
                            onClickResetValueForCounterHandler={props.onClickResetValueForCounterHandler}/>
         </>
     );
-}
+})
 
 export default SettingCounter;

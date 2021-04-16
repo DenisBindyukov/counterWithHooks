@@ -11,7 +11,7 @@ type CounterType = {
     resetStartValue: () => void
 }
 
-const Counter: React.FC<CounterType> = (props) => {
+const Counter: React.FC<CounterType> = React.memo((props) => {
     return (
         <div>
             <div className={`${style.display_style}
@@ -27,6 +27,6 @@ const Counter: React.FC<CounterType> = (props) => {
                 startValue={props.startValue}/>
         </div>
     );
-}
+})
 
 export default Counter;
